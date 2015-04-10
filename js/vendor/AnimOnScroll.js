@@ -94,6 +94,8 @@
 			var self = this;
 
 			imagesLoaded( this.el, function() {
+
+				$('.sk-spinner').hide();
 				
 				// initialize masonry
 				new Masonry( self.el, {
