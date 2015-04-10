@@ -830,25 +830,19 @@ main {
   /* ===============
     Intermediate
    =============== */
-  .grid li {
-    width: 50%;
-  }
 }
 @media only screen and (min-width: 768px) {
   /* ===============
     iPad portrait
    =============== */
   .grid li {
-    width: 33.333%;
+    width: 50%;
   }
 }
 @media only screen and (min-width: 1024px) {
   /* ===============
     iPad portrait
    =============== */
-  .grid li {
-    width: 25%;
-  }
 }
 @media only screen and (min-width: 1140px) {
   /* ===============
