@@ -731,7 +731,7 @@ main {
 .grid {
   width: 100%;
   list-style: none;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 0;
 }
 .grid li {
@@ -798,7 +798,7 @@ main {
     Desktop
    =============== */
   .grid li {
-    width: 20%;
+    width: 25%;
   }
 }
 /* ==========================================================================
