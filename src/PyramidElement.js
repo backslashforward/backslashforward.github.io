@@ -50,7 +50,8 @@ class PyramidImage extends React.Component {
     }
 
     handleImageLoaded() {
-        console.log("image loaded");
+        // console.log("image loaded");
+        
         this.setState(
             { loaded : true }
         )
