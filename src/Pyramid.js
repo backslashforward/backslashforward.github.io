@@ -18,7 +18,7 @@ export default class Pyramid extends React.Component {
                 "1440px" : 5 
             },
             gutter: props.magicValue ? props.magicValue : 20,
-            magicValue: props.magicValue ? props.magicValue : 1.5,
+            magicValue: props.magicValue ? props.magicValue : 1,
             allImageProps: [],
             zoomedIn: false,
             zoomingIn: false,
@@ -98,7 +98,7 @@ export default class Pyramid extends React.Component {
 
         var key = -1;
 
-
+        // console.log("number of images: " + this.state.images.length);
 
         var imageElements = this.state.images.map( image => {
 
@@ -169,10 +169,10 @@ export default class Pyramid extends React.Component {
 
             this.state.allImageProps[key] = imageProps;
 
-            
+            var baseClass = this.state.classes("element").className;
 
             return (
-                <PyramidElement {...this.state.classes("element")} key={key} {...imageProps} onClick={this.zoomIn.bind(this, key)}/>
+                <PyramidElement baseClass={baseClass} key={key} {...imageProps} onClick={this.zoomIn.bind(this, key)}/>
             )
         });
 

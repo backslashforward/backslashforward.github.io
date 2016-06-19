@@ -1,4 +1,5 @@
 import React from 'react';
+import BEMHelper from 'react-bem-helper';
 // import BEMHelper from 'react-bem-helper';
 
 // var classes = new BEMHelper("pyramid__image");
@@ -21,6 +22,11 @@ class PyramidImage extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            loaded: false,
+            classes: this.props.baseClass ? new BEMHelper(this.props.baseClass) : new BEMHelper("element")
+        };
     }
 
     render() {
@@ -32,19 +38,22 @@ class PyramidImage extends React.Component {
             top: this.props.top,
             left: this.props.left,
             // cursor: "pointer",
-            opacity: 0,
-            transition: "all 300ms linear"
-        }
-
-        if(this.props.inView) {
-            imageStyle.backgroundImage = "url('" + this.props.src + "')";
-            imageStyle.backgroundSize = "contain";
-            imageStyle.opacity = 1;
+            opacity: this.props.inView && this.state.loaded ? 1 : 0,
+            transition: "all 300ms linear",
         }
 
         return(
-            <div style={imageStyle} onClick={this.props.onClick} className={this.props.className} />
+            <div style={imageStyle} onClick={this.props.onClick} {...this.state.classes()}>
+                {this.props.inView ? <img src={this.props.src} {...this.state.classes("image")} style={{width: "100%", height: "100%"}} onLoad={this.handleImageLoaded.bind(this)} /> : ""}
+            </div>
         );
+    }
+
+    handleImageLoaded() {
+        console.log("image loaded");
+        this.setState(
+            { loaded : true }
+        )
     }
 }
 
