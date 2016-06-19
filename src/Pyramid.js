@@ -2,6 +2,8 @@ import React from 'react';
 import BEMHelper from 'react-bem-helper';
 import getUnit from 'get-unit';
 import PyramidElement from './PyramidElement';
+import elementResizeDetector from 'element-resize-detector';
+import debounce from 'debounce';
 
 export default class Pyramid extends React.Component {
 
@@ -9,6 +11,8 @@ export default class Pyramid extends React.Component {
         super(props);
 
         this.props = props;
+
+        this.erd = elementResizeDetector({strategy: "scroll"});
 
         this.state = {
             pyramidWidth: null,
@@ -42,13 +46,15 @@ export default class Pyramid extends React.Component {
             })
         }
 
-        window.addEventListener('resize', this.reRender.bind(this), true);
-        this.refs.pyramid.addEventListener('scroll', this.reRender.bind(this), true);
+        // window.addEventListener('resize', this.reRender.bind(this), true);
+        this.erd.listenTo(this.refs.pyramid, this.reRender.bind(this));
+        this.refs.pyramid.addEventListener('scroll', debounce(this.reRender.bind(this), 10), true);
     }
 
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.reRender, true);
+        // window.removeEventListener('resize', this.reRender, true);
+        this.erd.removeAllListeners(this.refs.pyramid);
         this.refs.pyramid.removeEventListener('scroll', this.reRender, true);
     }
 
