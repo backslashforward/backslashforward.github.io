@@ -1,0 +1,49 @@
+{
+  "name": "Blimp.se",
+  "version": "1.0.0",
+  "description": "Blimp - Creative Bureau based in Stockholm",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlimpBureau/blimp.github.io.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Nadan Gergeo <nadan@blimp.se> (http://github.com/nadangergeo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlimpBureau/blimp.github.io/issues"
+  },
+  "homepage": "http://blimp.se",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.6.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "get-unit": "^2.0.1",
+    "react": "^15.1.0",
+    "react-bem-helper": "^1.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
