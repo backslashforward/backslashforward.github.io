@@ -8,6 +8,8 @@ export default class Pyramid extends React.Component {
     constructor(props) {
         super(props);
 
+        this.props = props;
+
         this.state = {
             pyramidWidth: null,
             numberOfColumns: 1,
@@ -65,20 +67,20 @@ export default class Pyramid extends React.Component {
 
         var pyramidStyle = {
             display: "block",
-            position: "absolute",
+            position: "relative",
             width: "100%",
             height: "100%",
-            top: "0px",
-            left: "0px",
-            right: "0px",
-            bottom: "auto",
             clear: "both",
             overflowY: "auto"
         }
 
+        if(this.props.style){
+            Object.assign(pyramidStyle. this.props.style);
+        }
+
         if(this.state && !this.state.pyramidWidth) {            
             return (
-                <div ref="pyramid" style={pyramidStyle}></div>
+                <div ref="pyramid" style={pyramidStyle} {...this.state.classes()}></div>
             )
         }
 
