@@ -5,8 +5,6 @@ module.exports = {
   // devtool: 'eval',
   devtool: 'cheap-module-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
     './src/index'
   ],
   output: {
@@ -25,7 +23,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
+      loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }]
   }
