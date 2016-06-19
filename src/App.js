@@ -259,7 +259,7 @@ export default class App extends React.Component {
 
                 //rob and jack 
                 { 
-                    src: "img/showcase/rob_and_jack/RobAndJack-profile-image-2-mint_q50.png",
+                    src: "img/showcase/rob_and_jack/RobAndJack-profile-image-2-mint_q50.jpg",
                     orgWidth: 1280,
                     orgHeight: 1280
                 },
