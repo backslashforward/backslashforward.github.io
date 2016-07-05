@@ -23,8 +23,8 @@ export default class Pyramid extends React.Component {
                 "1280px" : 4,
                 "1440px" : 5 
             },
-            gutter: props.magicValue ? props.magicValue : 20,
-            magicValue: props.magicValue ? props.magicValue : 1,
+            gutter: props.gutter ? props.gutter : 20,
+            magicValue: props.magicValue ? props.magicValue : 0.2,
             allImageProps: [],
             zoomedIn: false,
             zoomingIn: false,
@@ -40,11 +40,11 @@ export default class Pyramid extends React.Component {
     }
 
     componentDidMount() {
-        if(this.state && !this.state.pyramidWidth) {
-            this.setState({
-                pyramidWidth: this.refs.pyramid.offsetWidth
-            })
-        }
+        // if(this.state && !this.state.pyramidWidth) {
+        //     this.setState({
+        //         pyramidWidth: this.refs.pyramid.offsetWidth
+        //     })
+        // }
 
         // window.addEventListener('resize', this.reRender.bind(this), true);
         this.erd.listenTo(this.refs.pyramid, this.reRender.bind(this));
@@ -65,6 +65,10 @@ export default class Pyramid extends React.Component {
         if(this.refs.pyramid) {
 
             this.state.pyramidWidth = this.refs.pyramid.offsetWidth;
+
+            if(this.state.pyramidWidth < 768) {
+                this.state.magicValue = 1;
+            }
 
             // console.log(this.refs.pyramid.offsetWidth);
             // console.log(this.refs.pyramid.offsetHeight);
@@ -157,17 +161,18 @@ export default class Pyramid extends React.Component {
             }
 
             if(
-                ( imageProps.top * this.state.magicValue > this.refs.pyramid.scrollTop
+                ( imageProps.top + (this.state.magicValue * this.refs.pyramid.offsetHeight) > this.refs.pyramid.scrollTop
                   &&
-                  imageProps.top < ( this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) * this.state.magicValue
+                  imageProps.top < ( this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) + (this.state.magicValue * this.refs.pyramid.offsetHeight)
                 )
                 ||
-                ( (imageProps.top + imageProps.height) * this.state.magicValue > this.refs.pyramid.scrollTop
+                ( (imageProps.top + imageProps.height) + (this.state.magicValue * this.refs.pyramid.offsetHeight) > this.refs.pyramid.scrollTop
                   &&
-                  imageProps.top + imageProps.height < (this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) * this.state.magicValue
+                  imageProps.top + imageProps.height < (this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) + (this.state.magicValue * this.refs.pyramid.offsetHeight)
                 )
             ) {
                 imageProps.inView = true;
+                console.log("inView:" + key);
             }
 
             // console.log(key);

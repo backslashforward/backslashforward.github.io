@@ -30,7 +30,8 @@ class PyramidImage extends React.Component {
     }
 
     render() {
-        var imageStyle = {
+        var imageContainerStyle = {
+            backgroundColor: "rgba(0,0,0,0.1)",
             display: "block",
             width: this.props.width + "px",
             height: this.props.height + "px",
@@ -38,13 +39,20 @@ class PyramidImage extends React.Component {
             top: this.props.top,
             left: this.props.left,
             // cursor: "pointer",
-            opacity: this.props.inView && this.state.loaded ? 1 : 0,
+            // opacity: this.props.inView && this.state.loaded ? 1 : 0,
             transition: "all 300ms linear",
-        }
+        };
+
+        var imageStyle = {
+            width: "100%",
+            height: "100%",
+            opacity: this.props.inView && this.state.loaded ? 1 : 0,
+            transition: "opacity 300ms linear",
+        };
 
         return(
-            <div style={imageStyle} onClick={this.props.onClick} {...this.state.classes()}>
-                {this.props.inView ? <img src={this.props.src} {...this.state.classes("image")} style={{width: "100%", height: "100%"}} onLoad={this.handleImageLoaded.bind(this)} /> : ""}
+            <div style={imageContainerStyle} onClick={this.props.onClick} {...this.state.classes()}>
+                {this.props.inView ? <img src={this.props.src} {...this.state.classes("image")} style={imageStyle} onLoad={this.handleImageLoaded.bind(this)} /> : ""}
             </div>
         );
     }
