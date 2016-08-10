@@ -35,31 +35,21 @@ export default class Pyramid extends React.Component {
     }
 
     reRender() {
-        // console.log('RERENDER!!');
         this.forceUpdate();
     }
 
     componentDidMount() {
-        // if(this.state && !this.state.pyramidWidth) {
-        //     this.setState({
-        //         pyramidWidth: this.refs.pyramid.offsetWidth
-        //     })
-        // }
-
-        // window.addEventListener('resize', this.reRender.bind(this), true);
         this.erd.listenTo(this.refs.pyramid, this.reRender.bind(this));
         this.refs.pyramid.addEventListener('scroll', debounce(this.reRender.bind(this), 10), true);
     }
 
 
     componentWillUnmount() {
-        // window.removeEventListener('resize', this.reRender, true);
         this.erd.removeAllListeners(this.refs.pyramid);
         this.refs.pyramid.removeEventListener('scroll', this.reRender, true);
     }
 
     render() {
-        // console.log('RENDER!');
         var thisComponent = this;
 
         if(this.refs.pyramid) {
@@ -69,10 +59,6 @@ export default class Pyramid extends React.Component {
             if(this.state.pyramidWidth < 768) {
                 this.state.magicValue = 1;
             }
-
-            // console.log(this.refs.pyramid.offsetWidth);
-            // console.log(this.refs.pyramid.offsetHeight);
-            // console.log(this.refs.pyramid.scrollTop);
         }
 
         var pyramidStyle = {
@@ -110,8 +96,6 @@ export default class Pyramid extends React.Component {
 
         var key = -1;
 
-        // console.log("number of images: " + this.state.images.length);
-
         var imageElements = this.state.images.map( image => {
 
             key = key + 1;
@@ -139,10 +123,6 @@ export default class Pyramid extends React.Component {
             if(imageProps.zoomedIn) {
                 console.log('yo!');
             }            
-
-            // console.log(this.refs.pyramid.offsetHeight);
-            // console.log(this.refs.pyramid.scrollTop);
-            // console.log(this.refs.pyramid)
 
             if(key => numberOfColumns) {
                 var imageAbove = this.state.allImageProps[key - numberOfColumns];
@@ -175,11 +155,6 @@ export default class Pyramid extends React.Component {
                 console.log("inView:" + key);
             }
 
-            // console.log(key);
-            // console.log("inView: " + imageProps.inView);
-            // console.log(imageProps);
-            // console.log(this.state.allImageProps[key]);
-
             this.state.allImageProps[key] = imageProps;
 
             var baseClass = this.state.classes("element").className;
@@ -188,10 +163,6 @@ export default class Pyramid extends React.Component {
                 <PyramidElement baseClass={baseClass} key={key} {...imageProps} onClick={this.zoomIn.bind(this, key)}/>
             )
         });
-
-        // console.log(this.state);
-        // console.log('pyramidWidth: ' + this.state.pyramidWidth);
-        // console.log('number of cols: ' + this.state.numberOfColumns);
 
         return (
             <div ref="pyramid" style={pyramidStyle} {...this.state.classes()}>

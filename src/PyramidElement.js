@@ -1,8 +1,5 @@
 import React from 'react';
 import BEMHelper from 'react-bem-helper';
-// import BEMHelper from 'react-bem-helper';
-
-// var classes = new BEMHelper("pyramid__image");
 
 class PyramidImage extends React.Component {
     static propTypes = { 
@@ -38,8 +35,6 @@ class PyramidImage extends React.Component {
             position: "absolute",
             top: this.props.top,
             left: this.props.left,
-            // cursor: "pointer",
-            // opacity: this.props.inView && this.state.loaded ? 1 : 0,
             transition: "all 300ms linear",
         };
 
@@ -58,8 +53,6 @@ class PyramidImage extends React.Component {
     }
 
     handleImageLoaded() {
-        // console.log("image loaded");
-        
         this.setState(
             { loaded : true }
         )
