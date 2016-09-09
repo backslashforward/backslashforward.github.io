@@ -16,7 +16,7 @@ export default class App extends React.Component {
                     orgHeight: 1080
                 },
                 {
-                    src: "img/showcase/elq/elq_website.jpg",
+                    src: "img/showcase/elq/elq_website_2.jpg",
                     orgWidth: 1080,
                     orgHeight: 1080
                 },
@@ -259,7 +259,7 @@ export default class App extends React.Component {
 
                 //rob and jack 
                 { 
-                    src: "img/showcase/rob_and_jack/RobAndJack-profile-image-2-mint_q50.jpg",
+                    src: "img/showcase/rob_and_jack/RobAndJack-profile-image-2-sabale-yellow-q50.jpg",
                     orgWidth: 1280,
                     orgHeight: 1280
                 },
