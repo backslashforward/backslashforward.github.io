@@ -121,7 +121,7 @@ export default class Pyramid extends React.Component {
             };
 
             if(imageProps.zoomedIn) {
-                console.log('yo!');
+                // console.log('yo!');
             }            
 
             if(key => numberOfColumns) {
@@ -152,7 +152,7 @@ export default class Pyramid extends React.Component {
                 )
             ) {
                 imageProps.inView = true;
-                console.log("inView:" + key);
+                // console.log("inView:" + key);
             }
 
             this.state.allImageProps[key] = imageProps;
