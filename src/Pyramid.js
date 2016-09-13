@@ -6,14 +6,10 @@ import elementResizeDetector from 'element-resize-detector';
 import debounce from 'debounce';
 
 export default class Pyramid extends React.Component {
-
     constructor(props) {
         super(props);
-
         this.props = props;
-
         this.erd = elementResizeDetector({strategy: "scroll"});
-
         this.state = {
             pyramidWidth: null,
             numberOfColumns: 1,
@@ -26,9 +22,6 @@ export default class Pyramid extends React.Component {
             gutter: props.gutter ? props.gutter : 20,
             magicValue: props.magicValue ? props.magicValue : 0.2,
             allImageProps: [],
-            zoomedIn: false,
-            zoomingIn: false,
-            zoomingOut: false,
             images: props.images ? props.images : [],
             classes: props.baseClass ? new BEMHelper(props.baseClass) : new BEMHelper("pyramid")
         }
@@ -50,12 +43,8 @@ export default class Pyramid extends React.Component {
     }
 
     render() {
-        var thisComponent = this;
-
         if(this.refs.pyramid) {
-
             this.state.pyramidWidth = this.refs.pyramid.offsetWidth;
-
             if(this.state.pyramidWidth < 768) {
                 this.state.magicValue = 1;
             }
@@ -97,17 +86,10 @@ export default class Pyramid extends React.Component {
         var key = -1;
 
         var imageElements = this.state.images.map( image => {
-
             key = key + 1;
-
-            var zoomedIn = this.state.allImageProps[key] ? this.state.allImageProps[key].zoomedIn : false;
-
-            var numberOfColumns = zoomedIn ? 1 : this.state.numberOfColumns;
-
+            var numberOfColumns = this.state.numberOfColumns;
             var imageWidth = (this.state.pyramidWidth - (numberOfColumns + 1) * this.state.gutter ) / numberOfColumns;
-
             var imageHeight = (imageWidth / image.orgWidth) * image.orgHeight;
-
             var imageProps = {
                 top: this.state.gutter,
                 left: this.state.gutter,
@@ -116,13 +98,8 @@ export default class Pyramid extends React.Component {
                 height: imageHeight,
                 src: image.src,
                 inView: this.state.allImageProps[key] ? this.state.allImageProps[key].inView : false,
-                zoomedIn: zoomedIn,
                 numberOfColumns: numberOfColumns
-            };
-
-            if(imageProps.zoomedIn) {
-                // console.log('yo!');
-            }            
+            };   
 
             if(key => numberOfColumns) {
                 var imageAbove = this.state.allImageProps[key - numberOfColumns];
@@ -152,7 +129,6 @@ export default class Pyramid extends React.Component {
                 )
             ) {
                 imageProps.inView = true;
-                // console.log("inView:" + key);
             }
 
             this.state.allImageProps[key] = imageProps;
@@ -160,7 +136,7 @@ export default class Pyramid extends React.Component {
             var baseClass = this.state.classes("element").className;
 
             return (
-                <PyramidElement baseClass={baseClass} key={key} {...imageProps} onClick={this.zoomIn.bind(this, key)}/>
+                <PyramidElement baseClass={baseClass} key={key} {...imageProps}/>
             )
         });
 
@@ -169,15 +145,5 @@ export default class Pyramid extends React.Component {
                 {imageElements}
             </div>
         );
-    }
-
-    zoomIn(key) {
-        console.log("zoom is under construction");
-        return;
-
-        this.state.zoomingIn = true;
-
-        this.state.allImageProps[key].zoomedIn = true;
-        this.reRender();
     }
 }
