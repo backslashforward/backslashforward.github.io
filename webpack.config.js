@@ -28,9 +28,9 @@ module.exports = {
     }]
   },
   resolve: {
-      alias: {
-          'react': 'inferno-compat',
-          'react-dom': 'inferno-compat'
-      }
+      // alias: {
+      //     'react': 'inferno-compat',
+      //     'react-dom': 'inferno-compat'
+      // }
   }
 };

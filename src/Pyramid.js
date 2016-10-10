@@ -21,8 +21,8 @@ export default class Pyramid extends React.Component {
             },
             gutter: props.gutter ? props.gutter : 20,
             magicValue: props.magicValue ? props.magicValue : 0.2,
-            allImageProps: [],
-            images: props.images ? props.images : [],
+            allElementProps: [],
+            elements: props.elements ? props.elements : [],
             classes: props.baseClass ? new BEMHelper(props.baseClass) : new BEMHelper("pyramid")
         }
     }
@@ -85,64 +85,65 @@ export default class Pyramid extends React.Component {
 
         var key = -1;
 
-        var imageElements = this.state.images.map( image => {
+        var elements = this.state.elements.map( element => {
             key = key + 1;
             var numberOfColumns = this.state.numberOfColumns;
-            var imageWidth = (this.state.pyramidWidth - (numberOfColumns + 1) * this.state.gutter ) / numberOfColumns;
-            var imageHeight = (imageWidth / image.orgWidth) * image.orgHeight;
-            var imageProps = {
+            var elementWidth = (this.state.pyramidWidth - (numberOfColumns + 1) * this.state.gutter ) / numberOfColumns;
+            var elementHeight = (elementWidth / element.orgWidth) * element.orgHeight;
+            var elementProps = {
+                type: element.type,
                 top: this.state.gutter,
                 left: this.state.gutter,
                 zIndex: 1000,
-                width: imageWidth,
-                height: imageHeight,
-                src: image.src,
-                inView: this.state.allImageProps[key] ? this.state.allImageProps[key].inView : false,
+                width: elementWidth,
+                height: elementHeight,
+                src: element.src,
+                inView: this.state.allElementProps[key] ? this.state.allElementProps[key].inView : false,
                 numberOfColumns: numberOfColumns
             };   
 
             if(key => numberOfColumns) {
-                var imageAbove = this.state.allImageProps[key - numberOfColumns];
+                var elementAbove = this.state.allElementProps[key - numberOfColumns];
 
-                if(imageAbove) {
-                    imageProps.top = imageAbove.top + imageAbove.height + this.state.gutter;
+                if(elementAbove) {
+                    elementProps.top = elementAbove.top + elementAbove.height + this.state.gutter;
                 }
             } 
 
             if(key % numberOfColumns > 0) {
-                var imageToTheLeft = this.state.allImageProps[key - 1];
+                var elementToTheLeft = this.state.allElementProps[key - 1];
 
-                if(imageToTheLeft) {
-                    imageProps.left = imageToTheLeft.left + imageToTheLeft.width + this.state.gutter;
+                if(elementToTheLeft) {
+                    elementProps.left = elementToTheLeft.left + elementToTheLeft.width + this.state.gutter;
                 }
             }
 
             if(
-                ( imageProps.top + (this.state.magicValue * this.refs.pyramid.offsetHeight) > this.refs.pyramid.scrollTop
+                ( elementProps.top + (this.state.magicValue * this.refs.pyramid.offsetHeight) > this.refs.pyramid.scrollTop
                   &&
-                  imageProps.top < ( this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) + (this.state.magicValue * this.refs.pyramid.offsetHeight)
+                  elementProps.top < ( this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) + (this.state.magicValue * this.refs.pyramid.offsetHeight)
                 )
                 ||
-                ( (imageProps.top + imageProps.height) + (this.state.magicValue * this.refs.pyramid.offsetHeight) > this.refs.pyramid.scrollTop
+                ( (elementProps.top + elementProps.height) + (this.state.magicValue * this.refs.pyramid.offsetHeight) > this.refs.pyramid.scrollTop
                   &&
-                  imageProps.top + imageProps.height < (this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) + (this.state.magicValue * this.refs.pyramid.offsetHeight)
+                  elementProps.top + elementProps.height < (this.refs.pyramid.scrollTop + this.refs.pyramid.offsetHeight) + (this.state.magicValue * this.refs.pyramid.offsetHeight)
                 )
             ) {
-                imageProps.inView = true;
+                elementProps.inView = true;
             }
 
-            this.state.allImageProps[key] = imageProps;
+            this.state.allElementProps[key] = elementProps;
 
             var baseClass = this.state.classes("element").className;
 
             return (
-                <PyramidElement baseClass={baseClass} key={key} {...imageProps}/>
+                <PyramidElement baseClass={baseClass} key={key} {...elementProps}/>
             )
         });
 
         return (
             <div ref="pyramid" style={pyramidStyle} {...this.state.classes()}>
-                {imageElements}
+                {elements}
             </div>
         );
     }

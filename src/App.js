@@ -8,7 +8,15 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            images: [
+            elements: [
+                //Stockholmsskolan
+                {
+                    type: "iframe",
+                    src: "http://gergeo.se/stockholmsskolan/",
+                    orgWidth: 1080,
+                    orgHeight: 1080
+                },
+
                 //elq
                 {
                     src: "img/showcase/elq/elq_logo.svg",
@@ -424,7 +432,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Pyramid images={this.state.images} />
+            <Pyramid elements={this.state.elements} />
         );
     }
 }
