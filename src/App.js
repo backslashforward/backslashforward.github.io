@@ -21,12 +21,14 @@ export default class App extends React.Component {
                 {
                     src: "img/showcase/elq/elq_logo.svg",
                     orgWidth: 1080,
-                    orgHeight: 1080
+                    orgHeight: 1080,
+                    href: "http://elq.io"
                 },
                 {
                     src: "img/showcase/elq/elq_website_2.jpg",
                     orgWidth: 1080,
-                    orgHeight: 1080
+                    orgHeight: 1080,
+                    href: "http://elq.io"
                 },
 
                 //gergeo invest
@@ -40,19 +42,22 @@ export default class App extends React.Component {
                 {
                     src: "img/showcase/sara_ljung/sara_ljung_its_over_q50.jpg",
                     orgWidth: 1500,
-                    orgHeight: 1500
+                    orgHeight: 1500,
+                    href: "https://open.spotify.com/track/7uEKx6KqTQi1Bc2huFRvKB"
                 },
 
                 //younger
                 {
                     src: "img/showcase/younger/wisewikeXadgXmartinbarra_rocket_spaceship_q80.jpg",
                     orgWidth: 1500,
-                    orgHeight: 1500
+                    orgHeight: 1500,
+                    href: "https://open.spotify.com/track/2Mx9wCMEa2va8Cv5zao3zC"
                 },
                 {
                     src: "img/showcase/younger/sean_bradford_broken_wings_q80.jpg",
                     orgWidth: 1500,
-                    orgHeight: 1500
+                    orgHeight: 1500,
+                    href: "https://open.spotify.com/track/1SKOLKQlqcLOu6RDiELNSW"
                 },
 
                 //absolut are
@@ -112,17 +117,20 @@ export default class App extends React.Component {
                 { 
                     src: "img/showcase/svung/utropstecknet/utropstecknet_2014_nr2_kongressen_v2_260dpi_web-1.jpg",
                     orgWidth: 800,
-                    orgHeight: 1131
+                    orgHeight: 1131,
+                    href: "https://issuu.com/utropstecknet/docs/utropstecknet_2014_nr2_kongressen_v"
                 },
                 { 
                     src: "img/showcase/svung/utropstecknet/utropstecknet_2014_nr2_kongressen_v2_265dpi_web_p8-9.jpg",
                     orgWidth: 1190,
-                    orgHeight: 842
+                    orgHeight: 842,
+                    href: "https://issuu.com/utropstecknet/docs/utropstecknet_2014_nr2_kongressen_v"
                 },
                 { 
                     src: "img/showcase/svung/utropstecknet/utropstecknet_2014_nr2_kongressen_v2_265dpi_web_p12-13.jpg",
                     orgWidth: 1190,
-                    orgHeight: 842
+                    orgHeight: 842,
+                    href: "https://issuu.com/utropstecknet/docs/utropstecknet_2014_nr2_kongressen_v"
                 },
 
                 { 
@@ -229,12 +237,14 @@ export default class App extends React.Component {
                 { 
                     src: "img/showcase/trustly/trustly-backoffice-login.png",
                     orgWidth: 600,
-                    orgHeight: 600
+                    orgHeight: 600,
+                    href: "https://backoffice.trustly.com/"
                 },
                 { 
                     src: "img/showcase/trustly/trustly-backoffice-dashboard.png",
                     orgWidth: 600,
-                    orgHeight: 600
+                    orgHeight: 600,
+                    href: "https://backoffice.trustly.com/"
                 },
 
                 //FA
@@ -269,7 +279,8 @@ export default class App extends React.Component {
                 { 
                     src: "img/showcase/rob_and_jack/RobAndJack-profile-image-2-sabale-yellow-q50.jpg",
                     orgWidth: 1280,
-                    orgHeight: 1280
+                    orgHeight: 1280,
+                    href: "http://robnjack.com/"
                 },
 
                 //ADG 
@@ -283,7 +294,8 @@ export default class App extends React.Component {
                 { 
                     src: "img/showcase/creative juice/creative-juice-cover-v1.png",
                     orgWidth: 600,
-                    orgHeight: 600
+                    orgHeight: 600,
+                    href: "https://open.spotify.com/user/nadan/playlist/52iyYK6HknMWZ37I7z6WlR"
                 },
 
                 //edin 

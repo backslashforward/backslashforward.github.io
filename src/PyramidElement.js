@@ -35,6 +35,8 @@ class PyramidImage extends React.Component {
     }
 
     render() {
+        var thisComponent = this;
+
         var normalizerCopy = Object.assign({}, this.styleNormalizer);
         var containerStyle = Object.assign(normalizerCopy, {
             backgroundColor: "rgba(0,0,0,0.1)",
@@ -53,13 +55,17 @@ class PyramidImage extends React.Component {
             height: "100%",
             opacity: this.props.inView && this.state.loaded ? 1 : 0,
             transition: "opacity 300ms linear",
+            cursor: this.props.href ? "pointer" : "default"
         });
 
         var elementProps = {
             src: this.props.src,
             className: this.state.classes(this.props.type),
             style: style,
-            onLoad: this.handleImageLoaded.bind(this)
+            onLoad: this.handleImageLoaded.bind(this),
+            onClick: function() {
+                window.open(thisComponent.props.href, "_blank");
+            }
         }
 
         var element = React.createElement(this.props.type, elementProps);

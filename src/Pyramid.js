@@ -99,7 +99,8 @@ export default class Pyramid extends React.Component {
                 height: elementHeight,
                 src: element.src,
                 inView: this.state.allElementProps[key] ? this.state.allElementProps[key].inView : false,
-                numberOfColumns: numberOfColumns
+                numberOfColumns: numberOfColumns,
+                href: element.href
             };   
 
             if(key => numberOfColumns) {
