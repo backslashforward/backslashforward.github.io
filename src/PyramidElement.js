@@ -64,7 +64,9 @@ class PyramidImage extends React.Component {
             style: style,
             onLoad: this.handleImageLoaded.bind(this),
             onClick: function() {
-                window.open(thisComponent.props.href, "_blank");
+                if(thisComponent.props.href) {
+                    window.open(thisComponent.props.href, "_blank");
+                }
             }
         }
 
