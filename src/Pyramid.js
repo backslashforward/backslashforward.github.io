@@ -44,7 +44,7 @@ export default class Pyramid extends React.Component {
 
     render() {
         if(this.refs.pyramid) {
-            this.state.pyramidWidth = this.refs.pyramid.offsetWidth;
+            this.state.pyramidWidth = this.refs.pyramid.scrollWidth;
             if(this.state.pyramidWidth < 768) {
                 this.state.magicValue = 1;
             }
