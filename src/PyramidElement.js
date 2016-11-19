@@ -12,8 +12,8 @@ class PyramidImage extends React.Component {
     };
 
     static defaultProps = { 
-        width: React.PropTypes.number,
-        height: React.PropTypes.number,
+        width: 0,
+        height: 0,
         top: 0,
         left: 0,
         type: "img" //todo: no default, and make required
