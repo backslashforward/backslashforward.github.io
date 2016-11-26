@@ -33,7 +33,7 @@ export default class Pyramid extends React.Component {
 
     componentDidMount() {
         this.erd.listenTo(this.refs.pyramid, this.reRender.bind(this));
-        this.refs.pyramid.addEventListener('scroll', debounce(this.reRender.bind(this), 10), true);
+        this.refs.pyramid.addEventListener('scroll', debounce(this.reRender.bind(this), 10), false);
     }
 
 
@@ -44,7 +44,7 @@ export default class Pyramid extends React.Component {
 
     render() {
         if(this.refs.pyramid) {
-            this.state.pyramidWidth = this.refs.pyramid.scrollWidth;
+            this.state.pyramidWidth = this.refs.pyramid.clientWidth;
             if(this.state.pyramidWidth < 768) {
                 this.state.magicValue = 1;
             }
