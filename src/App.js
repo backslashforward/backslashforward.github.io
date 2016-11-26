@@ -257,6 +257,7 @@ export default class App extends React.Component {
                 //Winged Bull 
                 { 
                     src: "img/showcase/winged_bull/winged-bull-r02-web.png",
+                    href: "img/showcase/winged_bull/capdesign_2015_nr3_en_hyllning_till_lamassun_av_nadan_gergeo.pdf",
                     orgWidth: 1200,
                     orgHeight: 1697
                 },
