@@ -216,7 +216,7 @@ export default class App extends React.Component {
                     orgHeight: 854
                 },
                 { 
-                    src: "img/showcase/bysara/bysara-logo-1.png",
+                    src: "img/showcase/bysara/bysara-logo-3.svg",
                     orgWidth: 900,
                     orgHeight: 900
                 },
