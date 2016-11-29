@@ -26,11 +26,5 @@ module.exports = {
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }]
-  },
-  resolve: {
-      // alias: {
-      //     'react': 'inferno-compat',
-      //     'react-dom': 'inferno-compat'
-      // }
   }
 };

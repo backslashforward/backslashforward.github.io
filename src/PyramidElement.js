@@ -1,7 +1,7 @@
 import React from "react";
 import BEMHelper from "react-bem-helper";
 
-class PyramidImage extends React.Component {
+class PyramidElement extends React.Component {
     static propTypes = { 
         src: React.PropTypes.string.isRequired,
         width: React.PropTypes.number.isRequired,
@@ -86,4 +86,4 @@ class PyramidImage extends React.Component {
     }
 }
 
-export default PyramidImage;
+export default PyramidElement;

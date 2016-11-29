@@ -1,9 +1,9 @@
 import React from 'react';
 import BEMHelper from 'react-bem-helper';
 import getUnit from 'get-unit';
-import PyramidElement from './PyramidElement';
 import elementResizeDetector from 'element-resize-detector';
 import debounce from 'debounce';
+import PyramidElement from './PyramidElement';
 
 export default class Pyramid extends React.Component {
     constructor(props) {
