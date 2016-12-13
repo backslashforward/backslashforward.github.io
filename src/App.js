@@ -8,7 +8,22 @@ export default class App extends React.Component {
 
         this.state = {
             elements: [
-                //Stockholmsskolan
+                // //Blimp Logo
+                // {
+                //     type: "iframe",
+                //     src: "http://gergeo.se/animated-blimp/",
+                //     orgWidth: 1080,
+                //     orgHeight: 1080
+                // },
+
+                //forkrok
+                // {
+                //     src: "img/showcase/forkrok/thanos_forkrok_29okt.png",
+                //     orgWidth: 1080,
+                //     orgHeight: 1080,
+                // },
+
+                //stockholmsskolan
                 {
                     type: "iframe",
                     src: "http://gergeo.se/stockholmsskolan/",
@@ -29,6 +44,28 @@ export default class App extends React.Component {
                     orgHeight: 1080,
                     href: "http://elq.io"
                 },
+
+                //battery
+                // {
+                //     src: "img/showcase/battery/battery_logo_v1.png",
+                //     orgWidth: 1500,
+                //     orgHeight: 1500,
+                //     href: "https://soundcloud.com/anodkatod"
+                // },
+
+                // {
+                //     src: "img/showcase/battery/battery_hello_world_cover_v1.png",
+                //     orgWidth: 1500,
+                //     orgHeight: 1500,
+                //     href: "https://soundcloud.com/anodkatod/hello-world"
+                // },
+
+                // //prince
+                // {
+                //     src: "img/showcase/purplerain/purplerain.png",
+                //     orgWidth: 1080,
+                //     orgHeight: 1080,
+                // },
 
                 //gergeo invest
                 {
@@ -59,7 +96,7 @@ export default class App extends React.Component {
                     href: "https://open.spotify.com/track/1SKOLKQlqcLOu6RDiELNSW"
                 },
 
-                //absolut are
+                //absolut art
                 // {
                 //     src: "img/showcase/absolut_art/absolut_art_ishi_x_alex_wessely.jpg",
                 //     orgWidth: 1080,
@@ -169,7 +206,8 @@ export default class App extends React.Component {
                 { 
                     src: "img/showcase/mentimeter/mentimeter-site.png",
                     orgWidth: 1200,
-                    orgHeight: 850
+                    orgHeight: 850,
+                    href: "https://vimeo.com/108248907"
                 },
 
                 //bsf
