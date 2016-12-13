@@ -1,6 +1,5 @@
 import React from 'react';
-import BEMHelper from 'react-bem-helper';
-import Pyramid from './Pyramid';
+import Pyramid from 'react-pyramid';
 
 export default class App extends React.Component {
 
