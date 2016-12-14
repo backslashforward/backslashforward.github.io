@@ -481,8 +481,26 @@ export default class App extends React.Component {
     }
 
     render() {
+
+        let numberOfColumns = {
+            default: 1,
+            breakpoints: {
+                "768px"  : 2,
+                "1024px" : 3,
+                "1280px" : 4,
+                "1441px" : 5 
+            }
+        }
+
+        let magicValues = {
+            default: 1,
+            breakpoints: {
+                "768px" : 0.2
+            }
+        }
+
         return (
-            <Pyramid elements={this.state.elements} />
+            <Pyramid elements={this.state.elements} numberOfColumns={numberOfColumns} magicValues={magicValues} />
         );
     }
 }
