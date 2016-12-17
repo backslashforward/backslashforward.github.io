@@ -4,13 +4,13 @@ import Pyramid from 'react-pyramid';
 export default class App extends React.Component {
     render() {
         let elements = [
-            // //Blimp Logo
-            // {
-            //     type: "iframe",
-            //     src: "http://gergeo.se/animated-blimp/",
-            //     orgWidth: 1080,
-            //     orgHeight: 1080
-            // },
+            //Blimp Logo
+            {
+                type: "iframe",
+                src: "http://gergeo.se/animated-blimp/",
+                orgWidth: 1080,
+                orgHeight: 1080
+            },
 
             //forkrok
             // {
@@ -42,26 +42,26 @@ export default class App extends React.Component {
             },
 
             //battery
-            // {
-            //     src: "img/showcase/battery/battery_logo_v1.png",
-            //     orgWidth: 1500,
-            //     orgHeight: 1500,
-            //     href: "https://soundcloud.com/anodkatod"
-            // },
+            {
+                src: "img/showcase/battery/battery_logo_v1.png",
+                orgWidth: 1500,
+                orgHeight: 1500,
+                href: "https://soundcloud.com/anodkatod"
+            },
 
-            // {
-            //     src: "img/showcase/battery/battery_hello_world_cover_v1.png",
-            //     orgWidth: 1500,
-            //     orgHeight: 1500,
-            //     href: "https://soundcloud.com/anodkatod/hello-world"
-            // },
+            {
+                src: "img/showcase/battery/battery_hello_world_cover_v1.png",
+                orgWidth: 1500,
+                orgHeight: 1500,
+                href: "https://soundcloud.com/anodkatod/hello-world"
+            },
 
-            // //prince
-            // {
-            //     src: "img/showcase/purplerain/purplerain.png",
-            //     orgWidth: 1080,
-            //     orgHeight: 1080,
-            // },
+            //prince
+            {
+                src: "img/showcase/purplerain/purplerain.png",
+                orgWidth: 1080,
+                orgHeight: 1080,
+            },
 
             //gergeo invest
             {
@@ -295,12 +295,20 @@ export default class App extends React.Component {
                 orgHeight: 1697
             },
 
-            //Kul1415 
+            //creative juice 
             { 
-                src: "img/showcase/kul1415/skyltar.jpg",
-                orgWidth: 640,
-                orgHeight: 640
+                src: "img/showcase/creative juice/creative-juice-cover-v1.png",
+                orgWidth: 600,
+                orgHeight: 600,
+                href: "https://open.spotify.com/user/nadan/playlist/52iyYK6HknMWZ37I7z6WlR"
             },
+
+            //Kul1415 
+            // { 
+            //     src: "img/showcase/kul1415/skyltar.jpg",
+            //     orgWidth: 640,
+            //     orgHeight: 640
+            // },
 
             //milo and starpoint 
             { 
@@ -318,31 +326,23 @@ export default class App extends React.Component {
             },
 
             //ADG 
-            { 
-                src: "img/showcase/adg/ta_av_dig_luvan_cover_r02_800x800.jpg",
-                orgWidth: 800,
-                orgHeight: 800
-            },
-
-            //creative juice 
-            { 
-                src: "img/showcase/creative juice/creative-juice-cover-v1.png",
-                orgWidth: 600,
-                orgHeight: 600,
-                href: "https://open.spotify.com/user/nadan/playlist/52iyYK6HknMWZ37I7z6WlR"
-            },
+            // { 
+            //     src: "img/showcase/adg/ta_av_dig_luvan_cover_r02_800x800.jpg",
+            //     orgWidth: 800,
+            //     orgHeight: 800
+            // },
 
             //edin 
-            { 
-                src: "img/showcase/edin/edin-logo-1.png",
-                orgWidth: 700,
-                orgHeight: 700
-            },
-            { 
-                src: "img/showcase/edin/edin-logo-2.png",
-                orgWidth: 700,
-                orgHeight: 700
-            },
+            // { 
+            //     src: "img/showcase/edin/edin-logo-1.png",
+            //     orgWidth: 700,
+            //     orgHeight: 700
+            // },
+            // { 
+            //     src: "img/showcase/edin/edin-logo-2.png",
+            //     orgWidth: 700,
+            //     orgHeight: 700
+            // },
 
             //lomo 
             { 
