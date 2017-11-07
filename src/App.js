@@ -12,6 +12,39 @@ export default class App extends React.Component {
                 orgHeight: 1080
             },
 
+            //kalles kök
+            {
+                src: "img/showcase/kalleskok/kalles_kok_logo_presentation.jpg",
+                orgWidth: 1181,
+                orgHeight: 1181
+            },
+            {
+                src: "img/showcase/kalleskok/kalles_kok_etikett_10x10cm_r02_fisk.jpg",
+                orgWidth: 1181,
+                orgHeight: 1181
+            },
+            {
+                src: "img/showcase/kalleskok/kalles_kok_etikett_10x10cm_r02_kott.jpg",
+                orgWidth: 1181,
+                orgHeight: 1181
+            },
+            {
+                src: "img/showcase/kalleskok/kalles_kok_etikett_10x10cm_r02_flask.jpg",
+                orgWidth: 1181,
+                orgHeight: 1181
+            },
+            {
+                src: "img/showcase/kalleskok/kalles_kok_etikett_10x10cm_r02_veggo.jpg",
+                orgWidth: 1181,
+                orgHeight: 1181
+            },
+            {
+                src: "img/showcase/kalleskok/kalles_kok_etikett_10x10cm_r02_vegan.jpg",
+                orgWidth: 1181,
+                orgHeight: 1181
+            },
+
+
             //forkrok
             // {
             //     src: "img/showcase/forkrok/thanos_forkrok_29okt.png",
