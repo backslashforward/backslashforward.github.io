@@ -79,7 +79,7 @@ export default class App extends React.Component {
                 src: "img/showcase/battery/battery_logo_v1.png",
                 orgWidth: 1500,
                 orgHeight: 1500,
-                href: "https://soundcloud.com/anodkatod"
+                href: "http://gergeo.se/battery"
             },
 
             {
