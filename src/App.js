@@ -254,11 +254,11 @@ export default class App extends React.Component {
             },
 
             //Mishmash
-            { 
-                src: "img/showcase/mishmash/mishmash-mockup-logo.png",
-                orgWidth: 1024,
-                orgHeight: 1447
-            },
+            // { 
+            //     src: "img/showcase/mishmash/mishmash-mockup-logo.png",
+            //     orgWidth: 1024,
+            //     orgHeight: 1447
+            // },
             // { 
             //     src: "img/showcase/mishmash/mishmash-mockup.png",
             //     orgWidth: 1024,
