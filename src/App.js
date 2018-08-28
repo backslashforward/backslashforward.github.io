@@ -7,7 +7,7 @@ export default class App extends React.Component {
             //Blimp Logo
             {
                 type: "iframe",
-                src: "http://gergeo.se/animated-blimp/",
+                src: "https://blimp-mountal.herokuapp.com/",
                 orgWidth: 1080,
                 orgHeight: 1080
             },
