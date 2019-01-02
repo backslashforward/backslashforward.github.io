@@ -50,14 +50,6 @@ export default class App extends React.Component {
                 href: "https://www.kalleskok.se"
             },
 
-
-            //forkrok
-            // {
-            //     src: "img/showcase/forkrok/thanos_forkrok_29okt.png",
-            //     orgWidth: 1080,
-            //     orgHeight: 1080,
-            // },
-
             //stockholmsskolan
             {
                 type: "iframe",
@@ -66,6 +58,40 @@ export default class App extends React.Component {
                 orgHeight: 1080
             },
 
+            //organics by sara
+            {
+                src: "img/showcase/bysara/2018/organicsbysara_design_2018_logo.svg",
+                orgWidth: 1080,
+                orgHeight: 1080
+            },
+            {
+                src: "img/showcase/bysara/2018/organicsbysara_design_2018_1_min.jpg",
+                orgWidth: 1080,
+                orgHeight: 1080
+            },
+            {
+                src: "img/showcase/bysara/2018/organicsbysara_design_2018_2_min.jpg",
+                orgWidth: 1080,
+                orgHeight: 1080
+            },
+            {
+                src: "img/showcase/bysara/2018/organicsbysara_design_2018_3_min.jpg",
+                orgWidth: 1080,
+                orgHeight: 1080
+            },
+            // {
+            //     src: "img/showcase/bysara/2018/organicsbysara_design_2018_4_min.jpg",
+            //     orgWidth: 1080,
+            //     orgHeight: 1080
+            // },
+
+            //forkrok
+            // {
+            //     src: "img/showcase/forkrok/thanos_forkrok_29okt.png",
+            //     orgWidth: 1080,
+            //     orgHeight: 1080,
+            // },
+            
             //elq
             {
                 src: "img/showcase/elq/elq_logo.svg",
