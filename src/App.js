@@ -53,7 +53,7 @@ export default class App extends React.Component {
             //stockholmsskolan
             {
                 type: "iframe",
-                src: "http://gergeo.se/stockholmsskolan/",
+                src: "https://gergeo.se/stockholmsskolan/",
                 orgWidth: 1080,
                 orgHeight: 1080
             },
