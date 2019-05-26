@@ -97,13 +97,13 @@ export default class App extends React.Component {
                 src: "img/showcase/elq/elq_logo.svg",
                 orgWidth: 1080,
                 orgHeight: 1080,
-                href: "http://elq.io"
+                href: "https://github.com/elqteam/elq"
             },
             {
                 src: "img/showcase/elq/elq_website_2.jpg",
                 orgWidth: 1080,
                 orgHeight: 1080,
-                href: "http://elq.io"
+                href: "https://github.com/elqteam/elq"
             },
 
             //battery
