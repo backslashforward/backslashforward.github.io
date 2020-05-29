@@ -172,11 +172,11 @@ export default class App extends React.Component {
             },
 
             //innovestic capital
-            {
-                src: "img/showcase/innovestic_capital/innovestic_capital_logo.png",
-                orgWidth: 1500,
-                orgHeight: 1500
-            },
+            // {
+            //     src: "img/showcase/innovestic_capital/innovestic_capital_logo.png",
+            //     orgWidth: 1500,
+            //     orgHeight: 1500
+            // },
 
             //på taket
             // { 
